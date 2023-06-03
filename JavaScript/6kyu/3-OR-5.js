@@ -11,22 +11,17 @@ output = 23
 **/
 
 function solution(number) {
-  let count = 0;
-  let itemized = [];
-  for (let i = 0; i < number; i++) {
-    itemized.push(count++);
-  }
 
   let sum = 0;
-  for (let i = 0; i < itemized.length; i++) {
-    if (itemized[i] % 3 === 0 && itemized[i] % 5 === 0) {
-      sum += itemized[i]
-    } else if (itemized[i] % 3 === 0 || itemized[i] % 5 === 0) {
-      sum += itemized[i];
-    } 
+  for (let i = 0; i < number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      sum += i;
+    } else if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+    }
   }
-console.log(sum)
-  return sum
+  console.log(sum);
+  return sum;
 }
 
 solution(10);
